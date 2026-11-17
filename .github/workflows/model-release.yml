@@ -1,0 +1,51 @@
+name: ModelForge AI - Model Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Validate and Release Champion
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch torchvision
+
+      - name: Verify approved model exists
+        run: |
+          test -f models/champion/champion.pth
+
+      - name: Generate SHA-256 release manifest
+        run: |
+          python scripts/create_release_manifest.py
+
+      - name: Verify manifest
+        run: |
+          python -c "import json; d=json.load(open('models/champion/release_manifest.json')); assert len(d['sha256']) == 64"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ModelForge AI ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            models/champion/champion.pth
+            models/champion/release_manifest.json

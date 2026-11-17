@@ -1,0 +1,16 @@
+{
+    "decision": "REJECTED",
+    "timestamp": "2026-11-17T12:47:44.982724",
+    "champion_accuracy": 0.7331910352187834,
+    "challenger_accuracy": 0.7289220917822838,
+    "champion_macro_f1": 0.7270093485382457,
+    "challenger_macro_f1": 0.7262586350420321,
+    "accuracy_improvement": -0.004268943436499528,
+    "macro_f1_change": -0.0007507134962135842,
+    "checks": {
+        "accuracy_improvement_passed": false,
+        "macro_f1_passed": true,
+        "same_dataset": true,
+        "same_class_mapping": true,
+        "smoke_test_passed": true,
+        "finite_metrics": 

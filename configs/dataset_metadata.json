@@ -1,0 +1,18 @@
+{
+    "dataset_name": "Waste Classification Dataset",
+    "task": "Image Classification",
+    "architecture": "MobileNetV3-Small",
+    "classes": {
+        "0": "Plastic Bottle",
+        "1": "Paper",
+        "2": "Can",
+        "3": "Plastic Bag"
+    },
+    "seed": 42,
+    "original_split_preserved": true,
+    "source_images": 2074,
+    "classification_crops": 4183,
+    "dataset_fingerprint": "27acb5a42e5289fb6b0b052a3e567f1f33d1deeb1d9b530a45fcd3bc6916ff98",
+    "source_url": "UNKNOWN",
+    "license": "UNKNOWN"
+}

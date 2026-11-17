@@ -1,0 +1,4 @@
+split,images,actual_percent,target_percent,difference_percentage_points
+train,1462,70.39,70.0,0.39
+val,432,20.8,15.0,5.8
+test,183,8.81,15.0,-6.19

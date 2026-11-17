@@ -1,0 +1,14 @@
+{
+    "class_to_id": {
+        "Plastic Bottle": 0,
+        "Paper": 1,
+        "Can": 2,
+        "Plastic Bag": 3
+    },
+    "id_to_class": {
+        "0": "Plastic Bottle",
+        "1": "Paper",
+        "2": "Can",
+        "3": "Plastic Bag"
+    }
+}

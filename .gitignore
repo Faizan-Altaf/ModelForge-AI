@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MLflow local data
+mlruns/
+mlartifacts/
+mlflow.db
+mlflow.db-shm
+mlflow.db-wal
+
+# Dataset - do not upload raw or processed images
+data/raw/
+data/processed/
+
+# Temporary output
+temp/
+tmp/
+*.tmp
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups
+reports/codegen_backups/
+
+
+# Keep only the active approved Champion in normal Git history
+models/champion/champion_backup_*.pth
+models/champion/champion_before_rollback_*.pth
+reports/codegen_backups/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset and MLflow
+data/raw/
+data/processed/
+mlflow.db*
+mlartifacts/
+
+# Temporary and backup files
+*.log
+reports/codegen_backups/
+models/champion/champion_backup_*.pth

@@ -1,0 +1,51 @@
+name: ModelForge AI - Continuous Integration
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Install, Test and Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-ci.txt
+
+      - name: Validate project files
+        run: |
+          test -f streamlit_app.py
+          test -f src/modelforge/inference.py
+          test -f src/modelforge/video.py
+          test -f models/champion/champion.pth
+
+      - name: Run automated tests
+        run: |
+          pytest -v tests --junitxml=test-results.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: modelforge-test-results
+          path: test-results.xml

@@ -1,0 +1,14 @@
+{
+    "class_to_idx": {
+        "Can": 0,
+        "Paper": 1,
+        "Plastic_Bag": 2,
+        "Plastic_Bottle": 3
+    },
+    "idx_to_class": {
+        "0": "Can",
+        "1": "Paper",
+        "2": "Plastic Bag",
+        "3": "Plastic Bottle"
+    }
+}

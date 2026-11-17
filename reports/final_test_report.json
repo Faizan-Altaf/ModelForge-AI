@@ -1,0 +1,81 @@
+{
+    "approved_model": "challenger_v3",
+    "training_run_id": "430b5dacf59f46489ad52095ce0ca463",
+    "dataset_fingerprint": "27acb5a42e5289fb6b0b052a3e567f1f33d1deeb1d9b530a45fcd3bc6916ff98",
+    "evaluation_split": "test",
+    "test_samples": 358,
+    "test_loss": 0.7756897134487856,
+    "test_accuracy": 0.6955307262569832,
+    "test_macro_f1": 0.6903806018742726,
+    "class_names": [
+        "Can",
+        "Paper",
+        "Plastic Bag",
+        "Plastic Bottle"
+    ],
+    "classification_report": {
+        "Can": {
+            "precision": 0.6385542168674698,
+            "recall": 0.8153846153846154,
+            "f1-score": 0.7162162162162162,
+            "support": 65.0
+        },
+        "Paper": {
+            "precision": 0.6233766233766234,
+            "recall": 0.6956521739130435,
+            "f1-score": 0.6575342465753424,
+            "support": 69.0
+        },
+        "Plastic Bag": {
+            "precision": 0.8333333333333334,
+            "recall": 0.6766917293233082,
+            "f1-score": 0.7468879668049793,
+            "support": 133.0
+        },
+        "Plastic Bottle": {
+            "precision": 0.6444444444444445,
+            "recall": 0.6373626373626373,
+            "f1-score": 0.6408839779005525,
+            "support": 91.0
+        },
+        "accuracy": 0.6955307262569832,
+        "macro avg": {
+            "precision": 0.6849271545054677,
+            "recall": 0.7062727889959011,
+            "f1-score": 0.6903806018742726,
+            "support": 358.0
+        },
+        "weighted avg": {
+            "precision": 0.709488237114945,
+            "recall": 0.6955307262569832,
+            "f1-score": 0.697152119111076,
+            "support": 358.0
+        }
+    },
+    "confusion_matrix": [
+        [
+            53,
+            3,
+            1,
+            8
+        ],
+        [
+            3,
+            48,
+            12,
+            6
+        ],
+        [
+            8,
+            17,
+            90,
+            18
+        ],
+        [
+            19,
+            9,
+            5,
+            58
+        ]
+    ]
+}

@@ -1,0 +1,3 @@
+Model,Validation Accuracy,Validation Macro F1
+Champion v1,0.7331910352187834,0.7270093485382457
+Challenger v2,0.7289220917822838,0.7262586350420321

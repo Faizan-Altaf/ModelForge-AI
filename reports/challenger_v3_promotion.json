@@ -1,0 +1,17 @@
+{
+    "candidate": "challenger_v3",
+    "baseline": "champion_v1",
+    "accuracy_improvement": 0.008537886872998945,
+    "macro_f1_change": 0.013828271932509906,
+    "checks": {
+        "accuracy_improvement": true,
+        "macro_f1_requirement": true,
+        "finite_metrics": true,
+        "same_dataset": true,
+        "same_class_names": true,
+        "same_class_mapping": true,
+        "checkpoint_load_and_smoke_test": true
+    },
+    "decision": "PROMOTED",
+    "timestamp": "2026-11-17T13:17:54.977394"
+}

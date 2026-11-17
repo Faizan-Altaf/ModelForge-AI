@@ -1,0 +1,4 @@
+split,Can,Paper,Plastic Bag,Plastic Bottle
+test,65,69,133,91
+train,806,468,746,868
+val,212,193,281,251
